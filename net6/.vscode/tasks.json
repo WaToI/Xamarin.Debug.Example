@@ -1,0 +1,30 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "command": "dotnet",
+    "args": [
+       "net6droid/net6droid.csproj",
+        "-c Debug"
+    ],
+    "tasks": [
+        {
+            "label": "install",
+            "command": "dotnet",
+            "args": [
+                "run",
+                "--project", "net6droid/net6droid.csproj",
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "clean",
+            "command": "dotnet",
+            "args": [
+                "clean",
+                "net6droid/net6droid.csproj",
+            ],
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}
